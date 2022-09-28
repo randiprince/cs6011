@@ -1,0 +1,27 @@
+What data is being sent to the other computer?
+- echo request and reply data is being sent
+-
+
+In Internet protocol version 4:
+- the source address is: my IPv4 address
+- the destination address is my partners IPv4 address
+
+In data section:
+- the integer values are displayed as hex numbers...we see a, e, f, etc in addition to 0-9.
+
+-it takes between 7 to 200 ms for the ping to travel
+- it takes ping packets when pinging google 19 to 127 ms
+- it takes ping packets when pinging Louvre.fr 140 to 237 ms to travel
+	- this tells us that the destination is further away
+STEP 3:
+
+- I see more than expected...we just went to one static page..not really anything to interact with after landing on the page
+- request data include request url, http headers including host, user agent info, etc. request is the thing you want
+- response data is similar to the request, but gives response message rather than the url. The response is the data to that response 
+
+-curl is a program/tool for transferring data from or to a server and designed to work without user interaction
+
+-when running curl example.com vs going to example.com in the browser, there seem to be less results in Wireshark, and on I don't see any 304 http codes...meaning there is no cached resources which I guess makes sense b/c we're not using an actual browsers where cached info can be stored? Also, using curl prints out all of the html and styling of the page, rather than seeing it in the browser.
+
+-when running http://github.com, it redirects us to https://github.com...aka a secure protocol. HTTPS uses TLS (SSL) to encrypt normal HTTP requests and responses, making it much more secure. This is why in Wireshark we can only see a the first couple of messages..once were redirected to a secure protocol, the messages are encrypted and we can no longer see them.
+
