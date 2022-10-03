@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 class FractionTest {
     @Test
     public void runATest() {
@@ -54,5 +57,22 @@ class FractionTest {
     @Test
     public void testException() {
         new Fraction(-3,0 );
+    }
+
+    @Test
+    public void testCompare() {
+        Fraction f1 = new Fraction(-3,4 );
+        Fraction f2 = new Fraction( -2, 8 );
+        long f3 = f1.compareTo( f2 );
+        Assertions.assertEquals( f3, 0 );
+    }
+
+    @Test
+    public void testSort() {
+        ArrayList<Fraction> fractionArrayList = new ArrayList<>();
+        fractionArrayList.add(new Fraction(-3,4 ));
+        fractionArrayList.add(new Fraction( -2, 8 ));
+        fractionArrayList.add(new Fraction(1,2 ));
+        fractionArrayList.sort(Fraction::compareTo);
     }
 }

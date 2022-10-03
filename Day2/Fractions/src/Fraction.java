@@ -1,6 +1,9 @@
 import java.io.IOException;
 
-public class Fraction {
+interface Comparable<T> {
+    int compareTo(T o);
+}
+class Fraction implements Comparable<Fraction>{
     private long numerator;
     private long denominator;
 
@@ -96,6 +99,16 @@ public class Fraction {
         long gcd = gcd();
         numerator = numerator / gcd;
         denominator = denominator / gcd;
+    }
+
+    public int compareTo(Fraction rhs) {
+        if (this.toDouble() < rhs.toDouble()) {
+            return -1;
+        } else if (this.toDouble() == rhs.toDouble()) {
+            return 0;
+        } else {
+            return 1;
+        }
     }
 
     public static void main(String[] args) {
