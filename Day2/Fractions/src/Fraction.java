@@ -10,21 +10,18 @@ public class Fraction {
         reduce();
     }
 
-    public Fraction(long n, long d) {
-        try {
-           System.out.println(n / d);
-            if (d < 0) {
-                numerator = n * -1;
-                denominator = d * -1;
-            } else {
-                numerator = n;
-                denominator = d;
-            }
-            reduce();
-        } catch (ArithmeticException e) {
-            System.out.println("You cannot divide by 0!");
+    public Fraction(long n, long d) throws ArithmeticException{
+        if (d == 0) {
+            throw new ArithmeticException("You cannot divide by zero!!");
         }
-
+        if (d < 0) {
+            numerator = n * -1;
+            denominator = d * -1;
+        } else {
+            numerator = n;
+            denominator = d;
+        }
+        reduce();
     }
 
     public Fraction plus(Fraction rhs) {

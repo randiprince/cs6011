@@ -22,12 +22,15 @@ class FractionTest {
 
     @Test
     public void testDivided() {
-        Fraction f1 = new Fraction(-3,4 );
-        Fraction f2 = new Fraction( -2, 8 );
-        Fraction f3 = f1.dividedBy( f2 );
+        try {
+            Fraction f1 = new Fraction(-3, 4);
+            Fraction f2 = new Fraction(0, 8);
+            Fraction f3 = f1.dividedBy(f2);
 
-        Assertions.assertEquals( f3.toString(), "3/1" );
-        Assertions.assertEquals( f3.toDouble(), 3.0);
+            Assertions.assertEquals(f3.toDouble(), null);
+        } catch (ArithmeticException e) {
+            System.out.println("You cannot divide by zero!!!!!!");
+        }
 
     }
 
