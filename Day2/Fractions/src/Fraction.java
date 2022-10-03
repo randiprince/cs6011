@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Fraction {
     long numerator;
     long denominator;
@@ -9,14 +11,20 @@ public class Fraction {
     }
 
     public Fraction(long n, long d) {
-        if (d < 0) {
-            numerator = n * -1;
-            denominator = d * -1;
-        } else {
-            numerator = n;
-            denominator = d;
+        try {
+           System.out.println(n / d);
+            if (d < 0) {
+                numerator = n * -1;
+                denominator = d * -1;
+            } else {
+                numerator = n;
+                denominator = d;
+            }
+            reduce();
+        } catch (ArithmeticException e) {
+            System.out.println("You cannot divide by 0!");
         }
-        reduce();
+
     }
 
     public Fraction plus(Fraction rhs) {

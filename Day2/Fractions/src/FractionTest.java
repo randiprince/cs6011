@@ -2,6 +2,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 class FractionTest {
     @Test
     public void runATest() {
@@ -25,7 +27,8 @@ class FractionTest {
         Fraction f3 = f1.dividedBy( f2 );
 
         Assertions.assertEquals( f3.toString(), "3/1" );
-        Assertions.assertEquals( f3.toDouble(), 3.0 );
+        Assertions.assertEquals( f3.toDouble(), 3.0);
+
     }
 
     @Test
@@ -45,6 +48,11 @@ class FractionTest {
         Fraction f3 = f1.minus( f2 );
 
         Assertions.assertEquals( f3.toString(), "-1/2" );
-        Assertions.assertEquals( f3.reciprocal(), -2 );
+        Assertions.assertEquals( f3.reciprocal().toString(), "-2/1" );
+    }
+
+    @Test
+    public void testException() throws RuntimeException{
+        new Fraction(-3,0 );
     }
 }
