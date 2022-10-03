@@ -1,8 +1,8 @@
 import java.io.IOException;
 
 public class Fraction {
-    long numerator;
-    long denominator;
+    private long numerator;
+    private long denominator;
 
     public Fraction () {
         numerator = 0;

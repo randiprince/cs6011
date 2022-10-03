@@ -1,8 +1,5 @@
-//import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
 
 class FractionTest {
     @Test
@@ -55,7 +52,7 @@ class FractionTest {
     }
 
     @Test
-    public void testException() throws RuntimeException{
+    public void testException() {
         new Fraction(-3,0 );
     }
 }
