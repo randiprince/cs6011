@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Times Table</title>
+        <script type="text/javascript" src="timesTable.js" defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="heading">
+                <h2>Multiplication Table</h2>
+            </div>
+            <div class="table">
+                <table id="mult-table">
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    .wrapper {
+        text-align: center;
+    }
+
+    table {
+        margin: 0 auto;
+    }
+
+    button {
+        margin: 20px 0;
+    }
+
+    .highlighted {
+        background-color: rgba(147, 250, 165, 0.7);
+        font-weight: bold;
+    }
+
+    .clicked {
+        background-color: rgba(221, 160, 221, 0.7);
+        font-weight: bold;
+    }
+
+    .animate {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+</style>
