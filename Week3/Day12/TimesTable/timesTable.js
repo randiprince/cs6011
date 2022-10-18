@@ -85,7 +85,6 @@ function handleClick() {
     
     let animation = setInterval(function () {
         if (!start) {
-            window.console.log("hi in conditional");
             clearInterval(animation);
             wrapper.style.backgroundColor = "#ffffff";
         } else {
