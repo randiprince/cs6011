@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculator</title>
+        <script type="text/javascript" src="calculator.js" defer></script>
+    </head>
+    <body>
+        <div>
+            <h1>Calculator</h1>
+        </div>
+        <div>
+            <div class="text-area">
+                <label for="xInput">X Value:</label>
+                <textarea id="xInput" name="xValue" rows="2" cols="30"></textarea>
+            </div>
+            <div class="text-area">
+                <label for="yInput">Y Value:</label>
+                <textarea id="yInput" name="yValue" rows="2" cols="30"></textarea>
+            </div>
+            <div class="text-area">
+                <label for="result">Result:</label>
+                <textarea id="result" name="result" rows="2" cols="30"></textarea>
+            </div>
+            <div class="text-area">
+                <label for="wsResult">Web Socket Result:</label>
+                <textarea id="wsResult" name="wsResult" rows="2" cols="30"></textarea>
+            </div>
+            <div>
+                <button>Add Numbers</button>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<style>
+    .text-area {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    label {
+        margin-right: 5px;
+    }
+</style>
