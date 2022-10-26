@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <meta charset="utf-8"> -->
+        <title>Chat Room</title>
+        <!-- <script type="text/javascript" src="chat.js" defer></script> -->
+    </head>
+    <body>
+        <div class="title">
+            <h1>Chat Room</h1>
+        </div>
+        <div class="needed-info">
+            <div class="text-area">
+                <label for="user-name">User Name:</label>
+                <input type="text" id="user-name" name="user-name" placeholder="username"></input>
+            </div>
+            <div class="text-area">
+                <label for="room-name">Room Name:</label>
+                <input type="text" id="room-name" name="room-name" placeholder="chat room"></input>
+            </div>
+            <div class="text-area">
+                <input id="submit" type="submit" value="Submit">
+            </div>
+        </div>
+        <div class="chat-area">
+            <div class="chat">
+                <div class="users-in-chat"></div>
+                <div class="chat-messages"></div>
+            </div>
+            <div>
+                <textarea class="message-area" rows="5" placeholder="Enter message here"></textarea>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
+
+<style>
+    body {
+        padding: 0 25px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .title {
+        text-align: center;
+    }
+    .needed-info {
+        display: flex;
+        justify-content: space-between;
+        max-width: 75%;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    .text-area {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    label {
+        margin-right: 5px;
+    }
+
+    .chat-area {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .chat {
+        height: 500px;
+        display: flex;
+        border: 2px solid rgb(47, 35, 152);
+    }
+
+    .users-in-chat {
+        flex-grow: 1;
+        border-right: 2px solid rgb(47, 35, 152);
+        text-align: center;
+        box-shadow: 20px 20px 50px 5px pink inset;
+    }
+
+    .chat-messages {
+        flex-grow: 4;
+        overflow-y: scroll;
+        box-shadow: -100px -100px 500px 100px palegreen inset;
+    }
+
+    p {
+        padding: 0 10px;
+    }
+
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        border: 2px solid rgb(47, 35, 152);
+        border-top: none;
+    }
+
+    textarea:focus-visible {
+        outline: none;
+    }
+
+</style>
