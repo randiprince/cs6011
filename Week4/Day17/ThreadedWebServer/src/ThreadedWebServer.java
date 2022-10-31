@@ -1,12 +1,11 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
+import java.util.*;
 
 import static java.lang.Thread.sleep;
 
 public class ThreadedWebServer {
-//    final ServerSocket serverSocket;
 
     public class MyRunnable implements Runnable {
         ServerSocket serverSocket = null;
@@ -17,31 +16,19 @@ public class ThreadedWebServer {
         @Override
         public void run() {
             Socket client = null;
-            InputStream inputStream = null;
             OutputStream outputStream = null;
-            Scanner scanner = null;
-            Scanner fileReader = null;
-            FileInputStream inputStream1 = null;
             PrintWriter printWriter = null;
             try {
                 client = serverSocket.accept();
-                inputStream = client.getInputStream();
-                scanner = new Scanner(inputStream);
-                scanner.next();
-                String fileName = scanner.next();
-
-                if (fileName.equals("/")) {
-                    fileName = "index.html";
-                } else {
-                    fileName = fileName.substring(1);
-                }
+                String fileName = getFileName(client);
                 System.out.println(fileName);
 
-                String line = scanner.nextLine();
-
-                while (!line.isEmpty()) {
-                    line = scanner.nextLine();
+                if (fileName.equals("/")) {
+                    fileName = "/index.html";
                 }
+                fileName = "resources" + fileName;
+                System.out.println(fileName);
+
                 File file = new File(fileName);
 
                 String result;
@@ -50,27 +37,15 @@ public class ThreadedWebServer {
                 } else {
                     result = "Error 404";
                 }
-                
+
                 outputStream = client.getOutputStream();
                 printWriter = new PrintWriter(outputStream);
 
-                printWriter.println("http/1.x" + result);
-                printWriter.println("Content-Type: text/css");
-                printWriter.println("Content-Type: text/html");
-                printWriter.println(); // blank line ends request header
-
-                inputStream1 = new FileInputStream(file);
-                fileReader = new Scanner(inputStream1);
-                while (fileReader.hasNextLine()) {
-                    printWriter.println(fileReader.nextLine());
-                    printWriter.flush();
-                    Thread.sleep(150);
-                }
+                makeHeader(result, printWriter);
+                readHTMLFile(file, printWriter);
 
             } catch (IOException e) {
                 e.printStackTrace();
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
             } finally {
                 try {
                     if (printWriter != null) {
@@ -119,6 +94,45 @@ public class ThreadedWebServer {
         }
 
     }
+
+    public String getFileName(Socket client) {
+        InputStream inputStream = null;
+        Scanner scanner = null;
+        String fileName = null;
+        try {
+            inputStream = client.getInputStream();
+            scanner = new Scanner(inputStream);
+            scanner.next();
+            fileName = scanner.next();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return fileName;
+    }
+
+    public void makeHeader(String result, PrintWriter printWriter) {
+        printWriter.println("HTTP/1.1 " + result);
+        printWriter.println("Content-type: " + "text/html");
+        printWriter.println("");
+
+    }
+
+    public void readHTMLFile(File file, PrintWriter printWriter) throws FileNotFoundException {
+        Scanner fileReader = null;
+        FileInputStream inputStream1 = null;
+        try {
+            inputStream1 = new FileInputStream(file);
+            fileReader = new Scanner(inputStream1);
+            while (fileReader.hasNextLine()) {
+                printWriter.println(fileReader.nextLine());
+                printWriter.flush();
+                Thread.sleep(15);
+            }
+        } catch (IOException | InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void main(String[] args) throws IOException, InterruptedException {
         new ThreadedWebServer();
     }
