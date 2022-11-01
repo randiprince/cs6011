@@ -37,7 +37,10 @@ function handleWebSocketMessage(e) {
 
     } else if (socketEvent.type === "message") {
         let messageText = document.createElement('p');
+        let timeStamp = document.createElement('span');
+        timeStamp.innerText = new Date().toLocaleTimeString();
         messageText.innerText = `${socketEvent.user}: ${socketEvent.message}`;
+        messageText.append(timeStamp);
         chatMessages.appendChild(messageText);
         messageArea.value = '';
         chatMessages.scrollTop = chatMessages.scrollHeight;
