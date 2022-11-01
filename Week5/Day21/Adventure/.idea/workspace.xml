@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a9005d67-55a7-4307-8dd1-8726dcd3670a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Day2/Rainfall/src/Rainfall.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Day2/Rainfall/src/Rainfall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioClip.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioClip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidgetBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidgetBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/ControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/ControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/LinerRamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/LinerRamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/MainCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/MainCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Mixer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Mixer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/SineWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/SineWave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/SineWaveGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/SineWaveGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Speaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/Speaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/VFSineWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/VFSineWave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/VolumeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/VolumeGUI.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GuMVH4dgyOJfJJ2bFAVpOPzdKN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/randiprince/cs6011/Week5/Day21/Adventure"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9005d67-55a7-4307-8dd1-8726dcd3670a" name="Changes" comment="" />
+      <created>1667234039055</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667234039055</updated>
+      <workItem from="1667234041152" duration="49000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
