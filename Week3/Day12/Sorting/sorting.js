@@ -57,7 +57,7 @@ function execute() {
     window.console.log("Sorted string values: ", arrayStrings);
 
     //mix of all three
-    let arrayRandom = [8, "hello", -99.99, 84, "what is happening", -1.345, 10000000];
+    let arrayRandom = [8, -99.99, 84, "what is happening", -1.345, 10000000, "hello"];
     window.console.log("Array values: " + arrayRandom);
     selectionSort(arrayRandom, compareFunction);
     window.console.log("Sorted random values: ", arrayRandom);
@@ -72,8 +72,8 @@ function execute() {
     selectionSort(arrayOfPeople, compareNameByLast);
     window.console.log(arrayOfPeople);
 
-    selectionSort(arrayOfPeople, compareNameByFirst);
-    window.console.log(arrayOfPeople);
+//     selectionSort(arrayOfPeople, compareNameByFirst);
+//     window.console.log(arrayOfPeople);
 }
 
 execute();

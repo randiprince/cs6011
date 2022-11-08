@@ -7,8 +7,10 @@ function createTable() {
         let tableRow = document.createElement('tr');
         multTable.appendChild(tableRow);
         for (let j = 0; j < 11; j++) {
+
             if (i === 0 || j === 0)  {
                 let tableHead =  document.createElement('th');
+                
                 if (j === 0) {
                     tableHead.innerText = i;
                 } else if (i === 0) {
